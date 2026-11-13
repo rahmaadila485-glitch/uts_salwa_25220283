@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f9;
+    color: #333;
+}
+
+/* Header Styles */
+.top-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo h2 {
+    color: #1e40af;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.search-box input {
+    width: 250px;
+    padding: 8px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+}
+
+/* Sidebar & Efek Pergerakan Interaktif */
+.sidebar {
+    width: 240px;
+    background-color: #0754ad;
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 14px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    
+    /* Efek Transisi Animasi Pergerakan Halus */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 1. Efek Hover (Saat kursor mendekat: tombol bergeser ke kanan & menyala) */
+.sidebar ul li a:hover {
+    background-color: #1e6bd6;
+    padding-left: 30px; 
+    transform: translateX(6px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Efek Active (Menu yang sedang dipilih) */
+.sidebar ul li.active a {
+    background-color: #043875;
+    border-left: 5px solid #60a5fa;
+    font-weight: bold;
+}
+
+/* 3. Efek Saat Diklik */
+.sidebar ul li a:active {
+    transform: scale(0.96);
+}
+
+.sidebar ul li.sign-out {
+    margin-top: 40px;
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    padding: 25px;
+}
+
+/* Pengaturan Halaman Dinamis (Hide/Show) */
+.page-content {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-content.active-page {
+    display: flex;
+}
+
+
+.statistik {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.gambar-statistik img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+/* Welcome Card */
+.welcome-card {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.welcome-text h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.welcome-text p {
+    font-size: 13px;
+    max-width: 600px;
+    opacity: 0.85;
+}
+
+.profile-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    object-fit: cover;
+    background-color: #fbbf24;
+}
+
+/* Main Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: pink;
+}
+
+.card.active {
+    background-color: pink;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+
+/* List Items */
+.list-item {
+    background-color: #f8fafc;
+    border-left: 3px solid #3b82f6;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.list-item h4 {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.list-item p {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* Footer Card */
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.attachment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+.btn-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sidebar a.active {
+    background-color: pink;
+    color: white;
+    border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.progres-kelas {
+  border-radius: 12px;
+  padding: 12px;
+  transition: background .3s, box-shadow .3s;
+}
+
+.progres-kelas.aktif {
+  background: #e8f0ff;
+  box-shadow: 0 0 0 3px #f958e7;
+}
+
+/* Otomatis aktif saat URL berakhiran #progres-kelas */
+.progres-kelas:target {
+  background: #e8f0ff;
+  box-shadow: 0 0 0 3px #1d4ed8;
+}
+
+.sidebar a {
+  display: block;               /* tampil menurun, bukan berjejer */
+  padding: 14px 24px;
+  color: #fff;                  /* putih, bukan biru link */
+  text-decoration: none;        /* hapus garis bawah */
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background .2s;
+}
+
+.sidebar a:hover {
+  background:pink;
+}
+
+.sidebar a.active {
+  background: rgba(223, 86, 219, 0.3);
+  border-left: 4px solid pink#fff;
+}

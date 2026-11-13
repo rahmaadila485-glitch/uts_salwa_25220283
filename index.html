@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js untuk grafik statistik -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header Semantik -->
+    <header class="top-header">
+        <div class="logo">
+            <h2>Royal Dashboard</h2>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Cari Ke Dokumen Aktif...">
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Navigasi Sidebar (Bisa diklik dan bergerak) -->
+        
+            <nav class="sidebar">
+                <a href="#home" class="menu-link active">Home</a>
+                <a href="#mahasiswa" class="menu-link">Mahasiswa</a>
+                <a href="#progreskelas" class="menu-link">Kelas</a>
+                <a href="#aktifitas" class="menu-link">Aktifitas</a>
+                <a href="#statistik" class="menu-link">Statistik</a>
+                <a href="#dokumen" class="menu-link">Dokumen</a>
+                <a href="#settings" class="menu-link">Settings</a>
+                <a href="#signout" class="menu-link">Sign Out</a>
+
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- Konten Halaman: HOME (Default) -->
+            <div id="page-home" class="page-content active-page">
+                <div class="welcome-card">
+                    <div class="welcome-text">
+                        <h1>Selamat Datang, Salwasalsabila</h1>
+                        <h2>Kelas SI-3J</h2>
+                        <p>Kamu memiliki Statistik, 3 Progres Kelas, 4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen yang ada pada aplikasi ini.</p>
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="salwa.jpeg" alt="profile-avatar">
+                    </div>
+                </div>
+
+                <div class="dashboard-grid" id="Statistik Mahasiswa">
+                    <aside class="statistik">
+                        <h3>Statistik Mahasiswa</h3>
+
+                        <div class="gambar-statistik" id="Statistik">
+                            <img src="statistik.png" alt="Statistik Mahasiswa">
+                        </div>
+                    </aside>
+
+                    <section class="card progreskelas " id="Kelas">
+                        <h3>Progres Kelas</h3>
+                        <div class="list-item"><h4>Matakuliah A</h4><p>78 Pendaftar</p></div>
+                        <div class="list-item"><h4>Matakuliah B</h4><p>30 Pendaftar</p></div>
+                        <div class="list-item"><h4>Matakuliah C</h4><p>40 Pendaftar</p></div>
+                        <div class="list-item"><h4>Matakuliah D</h4><p>10 Pendaftar</p></div>
+                    </section>
+
+                    <div class="card" id="Aktifitas">
+                        <h3>Aktifitas Selanjutnya</h3>
+                        <div class="list-item"><h4>Perkuliahan Daring 1</h4><p>Senin, 15 Januari 2025</p></div>
+                        <div class="list-item"><h4>Perkuliahan Daring 1</h4><p>Selasa, 15 Februari 2025</p></div>
+                        <div class="list-item"><h4>Perkuliahan Daring 1</h4><p>Rabu, 15 Maret 2025</p></div>
+                        <div class="list-item"><h4>Perkuliahan Daring 1</h4><p>Kamis, 15 April 2025</p></div>
+                    </div>
+                </div>
+
+                <footer class="card footer-card" id="Lampiran">
+                    <h3>Lampiran</h3>
+                    <div class="attachment-item">
+                        <span><strong>Lampiran Dokumen 1</strong> - Matakuliah A | Tugas Bersama Perkuliahan Daring</span>
+                        <a href="#" class="btn-link">Lihat Dokumen</a>
+                    </div>
+                    <div class="attachment-item">
+                        <span><strong>Lampiran Dokumen 2</strong> - Matakuliah B | Tugas Bersama Perkuliahan Daring</span>
+                        <a href="#" class="btn-link">Lihat Dokumen</a>
+                    </div>
+                    <div class="attachment-item">
+                        <span><strong>Lampiran Dokumen 3</strong> - Matakuliah C | Tugas Bersama Perkuliahan Daring</span>
+                        <a href="#" class="btn-link">Lihat Dokumen</a>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- Konten Halaman: MAHASISWA -->
+            <div id="page-mahasiswa" class="page-content">
+                <div class="card">
+                    <h2>Data Mahasiswa</h2>
+                    <p style="margin-top: 10px; color: #64748b;">Informasi lengkap profil mahasiswa, NIM, dan daftar rekan kelas Sistem Informasi.</p>
+                </div>
+            </div>
+
+            <!-- Konten Halaman: KELAS -->
+            <div id="page-kelas" class="page-content">
+                <div class="card">
+                    <h2>Daftar Kelas & Mata Kuliah</h2>
+                    <p style="margin-top: 10px; color: #64748b;">Kelola daftar mata kuliah aktif Anda semester ini (Matakuliah A, B, C, dan D).</p>
+                </div>
+            </div>
+
+            <!-- Konten Halaman Lainnya (Aktifitas, Statistik, Dokumen, Settings, Sign Out) -->
+            <div id="page-aktifitas" class="page-content"><div class="card"><h2>Menu Aktifitas</h2><p style="margin-top: 10px; color: #64748b;">Daftar jadwal pertemuan dan tugas daring.</p></div></div>
+            <div id="page-statistik" class="page-content"><div class="card"><h2>Menu Statistik</h2><p style="margin-top: 10px; color: #64748b;">Grafik perkembangan nilai dan kehadiran akademik.</p></div></div>
+            <div id="page-dokumen" class="page-content"><div class="card"><h2>Menu Dokumen</h2><p style="margin-top: 10px; color: #64748b;">Repositori file tugas dan modul kuliah.</p></div></div>
+            <div id="page-settings" class="page-content"><div class="card"><h2>Menu Settings</h2><p style="margin-top: 10px; color: #64748b;">Pengaturan akun dan preferensi tampilan.</p></div></div>
+            <div id="page-signout" class="page-content"><div class="card"><h2>Sign Out</h2><p style="margin-top: 10px; color: #64748b;">Anda telah keluar dari sistem.</p></div></div>
+
+        </main>
+    </div>
+
+    <script>
+  // nama menu : judul bagian yang dituju
+  const tujuan = {
+    'Kelas': 'Progres Kelas',
+    'Aktifitas': 'Aktifitas Selanjutnya',
+    'Statistik': 'Statistik Mahasiswa',
+    'Dokumen': 'Lampiran Dokumen'
+  };
+
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const namaJudul = tujuan[link.textContent.trim()];
+    if (!namaJudul) return;
+    e.preventDefault();
+
+    // cari judul bagian, lalu ambil pembungkusnya
+    const judul = [...document.querySelectorAll('h1,h2,h3,h4,p,span,div')]
+      .find(el => el.children.length === 0 && el.textContent.trim() === namaJudul);
+
+    if (!judul) {
+      console.log('Judul "' + namaJudul + '" tidak ditemukan');
+      return;
+    }
+
+    const target = judul.parentElement;
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    target.style.transition = 'background .3s, box-shadow .3s';
+    target.style.background = '#e8f0ff';
+    target.style.boxShadow = '0 0 0 3px #1d4ed8';
+    target.style.borderRadius = '12px';
+
+    setTimeout(() => {
+      target.style.background = '';
+      target.style.boxShadow = '';
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>
